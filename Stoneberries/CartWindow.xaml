@@ -97,7 +97,7 @@
         <Grid x:Name="NotifGrid" Margin="0,0,0,6" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="881" Margin="-18,-55,0,0" VerticalAlignment="Top" Width="1546" Fill="Black" Opacity="0.7"/>
             <Rectangle HorizontalAlignment="Center" Height="395" Margin="0,242,0,0" VerticalAlignment="Top" Width="641" Fill="#FFE5E5E5" RadiusX="50" RadiusY="50"/>
-            <Label Content="Товары успешно куплены" Margin="520,254,490,432" FontFamily="Calibri" FontSize="40" FontWeight="Bold" Background="#00000000" Foreground="#FF606060"/>
+            <Label Content="Товары успешно куплены" Margin="520,254,430,432" FontFamily="Calibri" FontSize="40" FontWeight="Bold" Background="#00000000" Foreground="#FF606060"/>
             <Image HorizontalAlignment="Left" Height="33" Margin="1021,254,0,0" VerticalAlignment="Top" Width="22" Source="/icon_close.png" MouseUp="HideNotifGrid"/>
             <Label Content="Забрать ваши товары вы можете в нашем пункте выдачи заказов по адресу" HorizontalAlignment="Left" Margin="465,0,0,0" VerticalAlignment="Center" FontFamily="Calibri Light" FontSize="18"/>
             <Label Content="453 SW 7th St, Miami, FL 33130, США" HorizontalAlignment="Left" Margin="470,446,0,0" VerticalAlignment="Top" FontFamily="Calibri" Foreground="#FFD00000" FontWeight="Bold" FontSize="36"/>
