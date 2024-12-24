@@ -81,7 +81,7 @@ namespace Stoneberries
         private void LoadCartItems()
         {
             int count = 0;
-            decimal cost = 0;
+            cost = 0;
             var cartItems = _cartService.GetCartItems(_currentUserService.LoggedInUser.Id);
             var cartItemsToLoad = cartItems.Select(cartItem => new CartItemToLoad
             {
@@ -126,14 +126,15 @@ namespace Stoneberries
         private void Buy_Click(object sender, RoutedEventArgs e)
         {
             var user = _applicationContext.Users.FirstOrDefault(x => x.Id == _currentUserService.LoggedInUser.Id);
-            if (user.Balance >= cost)
+            if (user.Balance >= cost && cartItemsControl.Items.Count!=0)
             {
                 NotifGrid.Visibility = Visibility.Visible;
                 user.Balance = user.Balance - cost;
                 _cartService.ClearCart(user.Id);
+                LoadCartItems();
                 NoMoney.Visibility = Visibility.Hidden;
             }
-            else
+            else if(cartItemsControl.Items.Count != 0) 
             {
                 NoMoney.Visibility = Visibility.Visible;
             }
