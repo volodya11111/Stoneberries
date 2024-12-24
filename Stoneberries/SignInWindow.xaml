@@ -1,0 +1,63 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Stoneberries"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Name="window" x:Class="Stoneberries.SignInWindow"
+        mc:Ignorable="d"
+        Title="SignInWindow" Height="812" Width="1500         " ResizeMode="NoResize">
+    <Window.Resources>
+        <ZoomPercentageConverter x:Key="ZoomPercentageConverter"/>
+        <Style TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Background="{TemplateBinding Background}" CornerRadius="5">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Cursor="Hand" />
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid x:Name="SignIn">
+            <Rectangle HorizontalAlignment="Center" Height="503" Margin="0,256,0,0" Stroke="Black" VerticalAlignment="Top" Width="864" Fill="#FF504242" RadiusX="50" RadiusY="50" StrokeThickness="0"/>
+            <TextBox x:Name="loginTextBox" HorizontalAlignment="Center" Height="73" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="712" FontSize="40" FontFamily="Calibri Light" Margin="0,336,0,0" PreviewKeyDown="TextBox_PreviewKeyDown" />
+            <PasswordBox x:Name="passwordBox" HorizontalAlignment="Center" Height="73" Margin="0,489,0,0" VerticalAlignment="Top" Width="712" FontSize="40" FontFamily="Calibri Light" PreviewKeyDown="TextBox_PreviewKeyDown" />
+            <Label Content="Логин" HorizontalAlignment="Left" Margin="394,276,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" FontSize="48"/>
+            <Label Content="Пароль" HorizontalAlignment="Left" Margin="394,420,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" FontSize="48"/>
+            <Button Content="Войти" HorizontalAlignment="Center" Height="74" Margin="0,639,0,0" VerticalAlignment="Top" Width="200" Background="#FF79777A" FontFamily="Calibri" FontSize="36" Foreground="White" FontWeight="Bold" BorderThickness="5,5,5,5" ClipToBounds="True" BorderBrush="#FF6D6D6D" Click="Button_Click"/>
+            <TextBlock HorizontalAlignment="Center" Height="28" Margin="0,718,0,0" TextWrapping="Wrap" Text="Регистрация" VerticalAlignment="Top" Width="116" Cursor="Hand" ForceCursor="True" Foreground="Gray" FontFamily="Calibri Light" FontSize="22" MouseLeftButtonUp="registerTextBlock"/>
+            <Label x:Name="wrongLogPass" Content="Введены неправильные данные" HorizontalAlignment="Center" Height="55" Margin="0,579,0,0" VerticalAlignment="Top" Width="346" FontSize="24" Background="Transparent" Foreground="#FFDA0000" FontFamily="Calibri" Visibility="Hidden"/>
+            <Rectangle x:Name="bg_logo"  RadiusY="50" RadiusX="50"  Margin="0,-101,0,0" Width="864" Height="316" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="1,1" StartPoint="0,0">
+                        <GradientStop Color="#FF504242" Offset="0.5"/>
+                        <GradientStop Color="#FF9B00FF" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image x:Name="logo" Source="/full_logo.png"  Margin="363,10,363,0" VerticalAlignment="Top" Height="188"/>
+            <Image HorizontalAlignment="Left" Height="69" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="/back_button.png" MouseLeftButtonUp="BackToLast_click"/>
+        </Grid>
+        <Grid x:Name="SignUp" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Center" Height="663" Margin="0,109,0,0" Stroke="Black" VerticalAlignment="Top" Width="864" Fill="#FF504242" RadiusX="50" RadiusY="50" StrokeThickness="0"/>
+            <Rectangle HorizontalAlignment="Center" Height="177" Margin="0,-81,0,0" Stroke="Black" VerticalAlignment="Top" Width="864" Fill="#FF504242" RadiusX="50" RadiusY="50" StrokeThickness="0"/>
+            <Label Content="Регистрация" HorizontalAlignment="Center" Margin="0,10,0,0" VerticalAlignment="Top" FontSize="48" FontFamily="Calibri" Foreground="White"/>
+            <TextBox x:Name="loginTextBox_reg" HorizontalAlignment="Center" Height="73" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="712" FontSize="40" FontFamily="Calibri Light" Margin="0,221,0,0" PreviewKeyDown="TextBox_PreviewKeyDown" />
+            <Label Content="Логин" HorizontalAlignment="Left" Margin="394,147,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" FontSize="48"/>
+            <TextBox x:Name="nameTextBox_reg" HorizontalAlignment="Center" Height="73" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="712" FontSize="40" FontFamily="Calibri Light" Margin="0,398,0,0" PreviewKeyDown="TextBox_PreviewKeyDown" />
+            <Label Content="Имя" HorizontalAlignment="Left" Margin="394,324,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" FontSize="48"/>
+            <TextBox x:Name="passwordTextBox_reg" HorizontalAlignment="Center" Height="73" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="712" FontSize="40" FontFamily="Calibri Light" Margin="0,566,0,0" PreviewKeyDown="TextBox_PreviewKeyDown" />
+            <Label Content="Пароль" HorizontalAlignment="Left" Margin="394,492,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Calibri" FontSize="48"/>
+            <Button Content="Зарегистрироваться" HorizontalAlignment="Center" Height="74" Margin="0,668,0,0" VerticalAlignment="Top" Width="346" Background="#FF79777A" FontFamily="Calibri" FontSize="36" Foreground="White" FontWeight="Bold" BorderThickness="5,5,5,5" ClipToBounds="True" BorderBrush="#FF6D6D6D" Click="RegButton_Click"/>
+            <Image HorizontalAlignment="Left" Height="69" Margin="10,10,0,0" VerticalAlignment="Top" Width="80" Source="/back_button.png" MouseLeftButtonUp="Back_click"/>
+            <Label x:Name="empty_login" Content="Поле не должно быть пустым" HorizontalAlignment="Left" Height="47" Margin="750,166,0,0" VerticalAlignment="Top" Width="363" Foreground="#FFDA0000" FontFamily="Calibri Light" FontSize="28" Visibility="Hidden"/>
+            <Label x:Name="empty_name" Content="Поле не должно быть пустым" HorizontalAlignment="Left" Height="47" Margin="750,343,0,0" VerticalAlignment="Top" Width="363" Foreground="#FFDA0000" FontFamily="Calibri Light" FontSize="28" Visibility="Hidden"/>
+            <Label x:Name="empty_pass" Content="Поле не должно быть пустым" HorizontalAlignment="Left" Height="47" Margin="750,514,0,0" VerticalAlignment="Top" Width="363" Foreground="#FFDA0000" FontFamily="Calibri Light" FontSize="28" Visibility="Hidden"/>
+            <Label x:Name="busy_login" Content="Логин занят" HorizontalAlignment="Left" Height="47" Margin="956,166,0,0" VerticalAlignment="Top" Width="150" Foreground="#FFDA0000" FontFamily="Calibri Light" FontSize="28" Visibility="Hidden"/>
+        </Grid>
+    </Grid>
+</Window>
