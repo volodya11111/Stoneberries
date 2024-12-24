@@ -47,11 +47,11 @@
         <Grid x:Name="AddBalanceGrid" Visibility="Hidden">
             <Rectangle HorizontalAlignment="Left" Height="881" Margin="-18,-55,0,0" VerticalAlignment="Top" Width="1546" Fill="Black" Opacity="0.7"/>
             <Rectangle HorizontalAlignment="Center" Height="395" Margin="0,242,0,0" VerticalAlignment="Top" Width="641" Fill="#FFE5E5E5" RadiusX="50" RadiusY="50"/>
-            <Label Content="Пополнить баланс" Margin="589,254,580,432" FontFamily="Calibri" FontSize="40" FontWeight="Bold" Background="#00000000" Foreground="#FF606060"/>
+            <Label Content="Пополнить баланс" Margin="589,254,532,432" FontFamily="Calibri" FontSize="40" FontWeight="Bold" Background="#00000000" Foreground="#FF606060"/>
             <Button Content="Пополнить" Width="250" Height="60" Background="#FF504242" Foreground="White" FontSize="24" FontWeight="Bold" Margin="0,551,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontFamily="Arial" Click="TopUp_Click"/>
             <TextBox x:Name="NumericTextBox" HorizontalAlignment="Left" Height="41" Margin="503,398,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="372" FontSize="32" FontFamily="Calibri Light" Text="0" PreviewTextInput="NumericTextBox_PreviewTextInput" PreviewKeyDown="NumericTextBox_PreviewKeyDown" TextChanged="NumericTextBox_TextChanged"/>
             <Label Content="Введите сумму в рублях" HorizontalAlignment="Left" Margin="503,359,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Foreground="#FF787878" Cursor=""/>
-            <Image HorizontalAlignment="Left" Height="33" Margin="1021,254,0,0" VerticalAlignment="Top" Width="22" Source="/icon_close.png" MouseUp="HideAddBalanceGrid"/>
+            <Image HorizontalAlignment="Left" Height="33" Margin="1021,254,0,0" VerticalAlignment="Top" Width="22" Source="/icon_close.png" MouseUp="HideAddBalanceGrid" Cursor="Hand"/>
         </Grid>
 
     </Grid>
