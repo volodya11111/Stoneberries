@@ -71,5 +71,9 @@
             <Image HorizontalAlignment="Right" Height="61" VerticalAlignment="Top" Width="63" Source="/search_icon.png" Cursor="Hand" MouseUp="Search_Click" Margin="0,-15,0,0"/>
             <TextBox x:Name="SearchTextBox" FontSize="24" FontFamily="Arial" UndoLimit="50" Margin="0,1,0,578" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="1012"/>
         </Grid>
+        <Grid x:Name="notification" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,226,0,0" Visibility="Hidden">
+            <Rectangle HorizontalAlignment="Center" Height="63" VerticalAlignment="Top" Width="408" Fill="#FFE5E5E5" RadiusX="30" RadiusY="30" Margin="0,-14,0,0"/>
+            <Label Content="Товар добавлен в корзину" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Calibri" FontWeight="Bold" FontSize="20"/>
+        </Grid>
     </Grid>
 </Window>

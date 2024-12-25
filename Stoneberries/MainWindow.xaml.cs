@@ -31,9 +31,9 @@ namespace Stoneberries
             _applicationContext = applicationContext;
             _currentUserService = currentUserService;
             _cartService = cartService;
-           
+
             InitializeComponent();
-           
+
             string baseDir = AppDomain.CurrentDomain.BaseDirectory;
             _baseDir = baseDir;
 
@@ -49,7 +49,7 @@ namespace Stoneberries
             var profileIcon = new ProfileIcon(_currentUserService, _applicationContext, _cartService);
             profileIcon.Click(this);
             this.Hide();
-  
+
         }
 
         private void LoadProducts(string query = "")
@@ -86,6 +86,10 @@ namespace Stoneberries
                 var button = sender as Button;
                 var product = button.DataContext as Product;
                 _cartService.AddProductToCartAsync(product);
+                if (notification.Visibility == Visibility.Hidden)
+                {
+                    Show_Notification();
+                }
             }
             else
             {
@@ -93,6 +97,12 @@ namespace Stoneberries
                 signInWindow.Show();
                 this.Hide();
             }
+        }
+        private async Task Show_Notification()
+        {
+            notification.Visibility = Visibility.Visible;
+            await Task.Delay(3000);
+            notification.Visibility = Visibility.Hidden;
         }
         private void Cart_Click(object sender, RoutedEventArgs e)
         {

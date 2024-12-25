@@ -23,8 +23,7 @@ namespace Stoneberries
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var databasePath = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.Parent.FullName, "StoneBerries.db");
-            optionsBuilder.UseSqlite($"Data Source={databasePath}");
+            optionsBuilder.UseSqlite($"Data Source= StoneBerries.db");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

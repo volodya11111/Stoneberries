@@ -29,8 +29,6 @@ namespace Stoneberries
                 options.UseSqlite("Data Source=StoneBerries.db"));
 
             services.AddSingleton<MainWindow>();
-
-            services.AddSingleton<IWindowFactory, WindowFactory>();
             
             services.AddSingleton<CurrentUserService>();
             
@@ -39,8 +37,7 @@ namespace Stoneberries
             ServiceProvider = services.BuildServiceProvider();
 
 
-            var windowFactory = ServiceProvider.GetRequiredService<IWindowFactory>();
-            var mainWindow = windowFactory.CreateWindow<MainWindow>();
+            var mainWindow = ServiceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }
     }
