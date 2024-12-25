@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Stoneberries"
         xmlns:controlzex="urn:controlzex" x:Class="Stoneberries.CartWindow"
         mc:Ignorable="d"
-        Title="CartWindow" Height="812" Width="1500" ResizeMode="NoResize">
+        Title="Корзина" Height="812" Width="1500" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="{x:Type Button}">
             <Setter Property="Template">

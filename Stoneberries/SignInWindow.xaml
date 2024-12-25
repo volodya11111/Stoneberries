@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Stoneberries"
         xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls" x:Name="window" x:Class="Stoneberries.SignInWindow"
         mc:Ignorable="d"
-        Title="SignInWindow" Height="812" Width="1500         " ResizeMode="NoResize">
+        Title="Вход" Height="812" Width="1500         " ResizeMode="NoResize">
     <Window.Resources>
         <ZoomPercentageConverter x:Key="ZoomPercentageConverter"/>
         <Style TargetType="{x:Type Button}">

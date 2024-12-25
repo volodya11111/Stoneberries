@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Stoneberries"
     
         mc:Ignorable="d"
-        Title="MainWindow" Height="812" Width="1500" ResizeMode="NoResize">
+        Title="Главный экран" Height="812" Width="1500" ResizeMode="NoResize">
     <Window.Resources>
         <Style TargetType="Button">
             <Setter Property="Template">
