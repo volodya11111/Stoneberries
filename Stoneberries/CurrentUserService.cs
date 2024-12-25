@@ -9,6 +9,7 @@ namespace Stoneberries
     public class CurrentUserService
     {
         public User? LoggedInUser { get; private set; }
+        public string Status { get; private set; }
 
         public void SetUser(User user)
         {

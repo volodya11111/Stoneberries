@@ -53,6 +53,7 @@
             <Label Content="Введите сумму в рублях" HorizontalAlignment="Left" Margin="503,359,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Calibri" Foreground="#FF787878" Cursor=""/>
             <Image HorizontalAlignment="Left" Height="33" Margin="1021,254,0,0" VerticalAlignment="Top" Width="22" Source="/icon_close.png" MouseUp="HideAddBalanceGrid" Cursor="Hand"/>
         </Grid>
+        <Image x:Name="admin" HorizontalAlignment="Left" Height="70" Margin="336,27,0,0" VerticalAlignment="Top" Width="72" Source="/user.png" MouseUp="Admin_Click"/>
 
     </Grid>
 </Window>

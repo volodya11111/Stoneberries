@@ -23,7 +23,7 @@ namespace Stoneberries
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite($"Data Source= StoneBerries.db");
+            optionsBuilder.UseSqlite($"Data Source = StoneBerries.db");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

@@ -35,6 +35,14 @@ namespace Stoneberries
             balance_label.Content = user.Balance;
             _applicationContext = applicationContext;
             _cartService = cartService;
+            if (user.Login == "admin")
+            {
+                admin.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                admin.Visibility = Visibility.Hidden;
+            }
         }
         private void Main_Click(object sender, RoutedEventArgs e)
         {
@@ -106,6 +114,13 @@ namespace Stoneberries
         {
             _currentUserService.SetUser(null);
             Main_Click(sender, e);
+        }
+
+        private void Admin_Click(object sender, MouseButtonEventArgs e)
+        {
+            var adminWindow = new AdminWindow(this, _applicationContext);
+            adminWindow.Show();
+            this.Hide();
         }
     }
 }

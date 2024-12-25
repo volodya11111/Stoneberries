@@ -48,6 +48,7 @@
     <None Remove="signin_icon.png" />
     <None Remove="signin_icon1.png" />
     <None Remove="StoneBerries.db" />
+    <None Remove="user.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="ControlzEx" Version="7.0.0-rc0118" />
@@ -145,10 +146,11 @@
     <Content Include="Products_images\9.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Resource Include="search_icon.png" />
-    <Resource Include="signin_icon1.png" />
     <Content Include="StoneBerries.db">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="search_icon.png" />
+    <Resource Include="signin_icon1.png" />
+    <Resource Include="user.png" />
   </ItemGroup>
 </Project>
